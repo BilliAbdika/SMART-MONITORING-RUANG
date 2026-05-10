@@ -1,0 +1,8 @@
+{
+  "monitoring": {
+    "suhu": 29,
+    "kelembaban": 70,
+    "gas": 120,
+    "asap": 90
+  }
+}

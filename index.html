@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Monitoring</title>
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- CHART JS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="dashboard">
+
+        <!-- HEADER -->
+        <div class="header">
+
+            <div class="logo">
+
+                <div class="logo-icon">
+                    <i class="fa-solid fa-microchip"></i>
+                </div>
+
+                <div>
+                    <h1>BILLI IKFI ABDIKA</h1>
+                    <p>Smart Monitoring Ruang Kontrol</p>
+                </div>
+
+            </div>
+
+            <!-- DATE TIME -->
+            <div class="datetime">
+
+                <div class="date-box">
+                    <i class="fa-regular fa-calendar"></i>
+                    <span id="date"></span>
+                </div>
+
+                <div class="time-box">
+                    <i class="fa-regular fa-clock"></i>
+                    <span id="clock"></span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- CONTENT -->
+        <div class="content">
+
+            <!-- SIDEBAR -->
+            <div class="sidebar">
+
+                <h2>Monitoring Sensor</h2>
+
+                <div class="sensor-grid">
+
+                    <!-- FAN -->
+                    <div class="sensor-card blue">
+
+                        <i class="fa-solid fa-fan fan-spin"></i>
+
+                        <h3>Fan</h3>
+
+                        <h1 class="sensor-on">OFF</h1>
+
+                    </div>
+
+                    <!-- ALARM -->
+                    <div class="sensor-card red">
+
+                        <i class="fa-solid fa-bell alarm-ring"></i>
+
+                        <h3>Alarm</h3>
+
+                        <h1 class="sensor-off">OFF</h1>
+
+                    </div>
+
+                    <!-- LAMPU -->
+                    <div class="sensor-card orange">
+
+                        <i class="fa-solid fa-lightbulb lamp-glow"></i>
+
+                        <h3>Lampu Ruang</h3>
+
+                        <h1 class="sensor-on">ON</h1>
+
+                    </div>
+
+                    <!-- DARURAT -->
+                    <div class="sensor-card purple">
+
+                        <i class="fa-solid fa-triangle-exclamation emergency-blink"></i>
+
+                        <h3>Lampu Darurat</h3>
+
+                        <h1 class="sensor-off">OFF</h1>
+
+                    </div>
+
+                </div>
+
+                <!-- STATUS -->
+                <div class="status-box">
+
+                    <h2>Status Ruang Kontrol</h2>
+
+                    <div class="status-item">
+                        <span>ESP32</span>
+                        <span class="green">Connected</span>
+                    </div>
+
+                    <div class="status-item">
+                        <span>Koneksi Server</span>
+                        <span class="green">Connected</span>
+                    </div>
+
+                    <div class="status-item">
+                        <span>Semua Sensor</span>
+                        <span class="green">Aktif</span>
+                    </div>
+                </div>
+
+                <!-- SENSOR YANG DIGUNAKAN -->
+                <div class="device-box">
+
+                    <h2>Sensor Yang Digunakan</h2>
+
+                    <div class="device-grid">
+
+                        <!-- DHT22 -->
+                        <div class="device-card">
+
+                            <i class="fa-solid fa-temperature-half"></i>
+
+                            <h3>DHT22</h3>
+
+                            <p>Suhu & Kelembaban</p>
+
+                        </div>
+
+                        <!-- LDR -->
+                        <div class="device-card">
+
+                            <i class="fa-solid fa-sun"></i>
+
+                            <h3>LDR</h3>
+
+                            <p>Sensor Cahaya</p>
+
+                        </div>
+
+                        <!-- MQ-2 -->
+                        <div class="device-card">
+
+                            <i class="fa-solid fa-cloud"></i>
+
+                            <h3>MQ-2</h3>
+
+                            <p>Sensor Asap</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- MAIN -->
+            <div class="main">
+
+                <div class="chart-grid">
+
+                    <!-- SUHU -->
+                    <div class="chart-card">
+
+                        <div class="chart-title">
+                            <i class="fa-solid fa-temperature-half"></i>
+                            Grafik Suhu
+                        </div>
+
+                        <canvas id="suhuChart"></canvas>
+
+                    </div>
+
+                    <!-- KELEMBABAN -->
+                    <div class="chart-card">
+
+                        <div class="chart-title">
+                            <i class="fa-solid fa-droplet"></i>
+                            Grafik Kelembaban
+                        </div>
+
+                        <canvas id="kelembabanChart"></canvas>
+
+                    </div>
+
+                    <!-- ASAP -->
+                    <div class="chart-card">
+
+                        <div class="chart-title">
+                            <i class="fa-solid fa-cloud"></i>
+                            Grafik Asap
+                        </div>
+
+                        <canvas id="asapChart"></canvas>
+
+                    </div>
+
+                    <!-- CAHAYA -->
+                    <div class="chart-card">
+
+                        <div class="chart-title">
+                            <i class="fa-solid fa-sun"></i>
+                            Grafik Cahaya
+                        </div>
+
+                        <canvas id="cahayaChart"></canvas>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- FOOTER -->
+        <div class="footer">
+            © 2026 Dashboard Smart Monitoring
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
