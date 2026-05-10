@@ -273,7 +273,7 @@ canvas{
 /* FAN */
 
 .fan-spin{
-    animation:fanRotate 0s linear infinite;
+    animation:fanRotate 1s linear infinite;
 }
 
 @keyframes fanRotate{
@@ -291,7 +291,7 @@ canvas{
 /* ALARM */
 
 .alarm-ring{
-    animation:alarmRing 0s ease-in-out infinite;
+    animation:alarmRing 1s ease-in-out infinite;
 }
 
 @keyframes alarmRing{
@@ -346,7 +346,7 @@ canvas{
 /* DARURAT */
 
 .emergency-blink{
-    animation:emergencyBlink 0s linear infinite;
+    animation:emergencyBlink 0.8s linear infinite;
 }
 
 @keyframes emergencyBlink{
@@ -365,12 +365,225 @@ canvas{
 
 }
 
-/* RESPONSIVE */
+/* ========================= */
+/* DESKTOP */
+/* ========================= */
 
-@media(max-width:1300px){
+@media screen and (min-width:901px){
 
     body{
-        min-width:1350px;
+        overflow-x:auto;
+    }
+
+    .dashboard{
+        width:1280px;
+        min-height:850px;
+    }
+
+    .content{
+        grid-template-columns:270px 1fr;
+    }
+
+    .chart-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    canvas{
+        height:210px !important;
+    }
+
+}
+
+/* ========================= */
+/* TABLET */
+/* ========================= */
+
+@media screen and (max-width:900px){
+
+    body{
+        padding:18px;
+        overflow-x:hidden;
+    }
+
+    .dashboard{
+        width:100%;
+        border-radius:22px;
+        padding:18px;
+    }
+
+    .content{
+        grid-template-columns:1fr;
+    }
+
+    .chart-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .sensor-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .device-grid{
+        grid-template-columns:1fr 1fr 1fr;
+    }
+
+}
+
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+
+@media screen and (max-width:600px){
+
+    body{
+        padding:10px;
+        overflow-x:hidden;
+    }
+
+    .dashboard{
+        width:100%;
+        padding:14px;
+        border-radius:18px;
+    }
+
+    /* HEADER */
+
+    .header{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:14px;
+    }
+
+    .logo{
+        gap:10px;
+    }
+
+    .logo-icon{
+        width:42px;
+        height:42px;
+        font-size:16px;
+    }
+
+    .logo h1{
+        font-size:15px;
+    }
+
+    .logo p{
+        font-size:11px;
+    }
+
+    /* DATE */
+
+    .datetime{
+        width:100%;
+        justify-content:space-between;
+    }
+
+    .date-box,
+    .time-box{
+        width:48%;
+        justify-content:center;
+        font-size:11px;
+        padding:9px;
+    }
+
+    /* CONTENT */
+
+    .content{
+        grid-template-columns:1fr;
+        gap:14px;
+    }
+
+    /* SENSOR */
+
+    .sensor-grid{
+        grid-template-columns:1fr 1fr;
+        gap:8px;
+    }
+
+    .sensor-card{
+        padding:10px;
+        border-radius:14px;
+    }
+
+    .sensor-card i{
+        font-size:16px;
+    }
+
+    .sensor-card h3{
+        font-size:11px;
+    }
+
+    .sensor-card h1{
+        font-size:12px;
+    }
+
+    /* STATUS */
+
+    .status-box{
+        padding:12px;
+    }
+
+    .status-box h2{
+        font-size:14px;
+    }
+
+    .status-item{
+        font-size:11px;
+    }
+
+    /* DEVICE */
+
+    .device-box{
+        padding:12px;
+    }
+
+    .device-box h2{
+        font-size:14px;
+    }
+
+    .device-grid{
+        grid-template-columns:1fr;
+        gap:8px;
+    }
+
+    .device-card{
+        padding:10px;
+    }
+
+    .device-card h3{
+        font-size:12px;
+    }
+
+    .device-card p{
+        font-size:10px;
+    }
+
+    /* CHART */
+
+    .chart-grid{
+        grid-template-columns:1fr;
+        gap:12px;
+    }
+
+    .chart-card{
+        padding:12px;
+        border-radius:14px;
+    }
+
+    .chart-title{
+        font-size:12px;
+    }
+
+    canvas{
+        height:170px !important;
+    }
+
+    /* FOOTER */
+
+    .footer{
+        font-size:11px;
+        margin-top:14px;
     }
 
 }
