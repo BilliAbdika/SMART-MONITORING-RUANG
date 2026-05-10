@@ -1,13 +1,9 @@
-/* RESET */
-
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
     font-family:Arial, Helvetica, sans-serif;
 }
-
-/* BODY */
 
 body{
     background:linear-gradient(135deg,#5f27ff,#b967ff);
@@ -16,15 +12,11 @@ body{
     overflow-x:auto;
 }
 
-/* CONTAINER */
-
 .container{
     width:100%;
     display:flex;
     justify-content:center;
 }
-
-/* DASHBOARD */
 
 .dashboard{
     width:1280px;
@@ -35,16 +27,12 @@ body{
     box-shadow:0 10px 35px rgba(0,0,0,0.15);
 }
 
-/* HEADER */
-
 .header{
     display:flex;
     justify-content:space-between;
     align-items:center;
     margin-bottom:22px;
 }
-
-/* LOGO */
 
 .logo{
     display:flex;
@@ -74,8 +62,6 @@ body{
     color:#666;
 }
 
-/* DATE TIME */
-
 .datetime{
     display:flex;
     gap:10px;
@@ -93,30 +79,22 @@ body{
     font-weight:bold;
 }
 
-/* CONTENT */
-
 .content{
     display:grid;
     grid-template-columns:270px 1fr;
     gap:18px;
 }
 
-/* SIDEBAR */
-
 .sidebar h2{
     font-size:18px;
     margin-bottom:16px;
 }
-
-/* SENSOR GRID */
 
 .sensor-grid{
     display:grid;
     grid-template-columns:1fr 1fr;
     gap:10px;
 }
-
-/* SENSOR CARD */
 
 .sensor-card{
     padding:10px;
@@ -139,8 +117,6 @@ body{
     font-size:10px;
 }
 
-/* WARNA */
-
 .blue{
     background:linear-gradient(135deg,#3b62a2,#0f172a);
 }
@@ -156,8 +132,6 @@ body{
 .purple{
     background:linear-gradient(135deg,#221b3a,#4c1d95);
 }
-
-/* STATUS */
 
 .status-box{
     background:#f4f5fb;
@@ -183,8 +157,6 @@ body{
     color:#27ae60;
     font-weight:bold;
 }
-
-/* SENSOR DEVICE */
 
 .device-box{
     background:#f4f5fb;
@@ -233,8 +205,6 @@ body{
     color:#666;
 }
 
-/* MAIN */
-
 .chart-grid{
     display:grid;
     grid-template-columns:1fr 1fr;
@@ -261,16 +231,12 @@ canvas{
     height:210px !important;
 }
 
-/* FOOTER */
-
 .footer{
     text-align:center;
     margin-top:18px;
     font-size:13px;
     color:#666;
 }
-
-/* FAN */
 
 .fan-spin{
     animation:fanRotate 0s linear infinite;
@@ -287,8 +253,6 @@ canvas{
     }
 
 }
-
-/* ALARM */
 
 .alarm-ring{
     animation:alarmRing 0s ease-in-out infinite;
@@ -318,8 +282,6 @@ canvas{
 
 }
 
-/* LAMPU */
-
 .lamp-glow{
     animation:lampGlow 1.5s ease-in-out infinite;
 }
@@ -343,8 +305,6 @@ canvas{
 
 }
 
-/* DARURAT */
-
 .emergency-blink{
     animation:emergencyBlink 0s linear infinite;
 }
@@ -364,10 +324,6 @@ canvas{
     }
 
 }
-
-/* =============================== */
-/* DESKTOP */
-/* =============================== */
 
 @media screen and (min-width:901px){
 
@@ -402,10 +358,6 @@ canvas{
 
 }
 
-/* =============================== */
-/* ANDROID / MOBILE */
-/* =============================== */
-
 @media screen and (max-width:900px){
 
     body{
@@ -418,8 +370,6 @@ canvas{
         padding:15px;
         border-radius:18px;
     }
-
-    /* HEADER */
 
     .header{
         flex-direction:column;
@@ -445,8 +395,6 @@ canvas{
         font-size:11px;
     }
 
-    /* DATE */
-
     .datetime{
         width:100%;
         justify-content:space-between;
@@ -460,14 +408,10 @@ canvas{
         padding:8px;
     }
 
-    /* CONTENT */
-
     .content{
         grid-template-columns:1fr;
         gap:14px;
     }
-
-    /* SENSOR */
 
     .sensor-grid{
         grid-template-columns:1fr 1fr;
@@ -491,8 +435,6 @@ canvas{
         font-size:11px;
     }
 
-    /* STATUS */
-
     .status-box{
         padding:12px;
         border-radius:14px;
@@ -505,8 +447,6 @@ canvas{
     .status-item{
         font-size:11px;
     }
-
-    /* SENSOR DEVICE */
 
     .device-box{
         padding:12px;
@@ -538,8 +478,6 @@ canvas{
         font-size:10px;
     }
 
-    /* CHART */
-
     .chart-grid{
         grid-template-columns:1fr;
         gap:12px;
@@ -557,8 +495,6 @@ canvas{
     canvas{
         height:170px !important;
     }
-
-    /* FOOTER */
 
     .footer{
         font-size:11px;
